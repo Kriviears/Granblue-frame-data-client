@@ -1,0 +1,12 @@
+.header_bar {
+  display: flex;
+}
+
+.char_tabs {
+  display: flex;
+}
+
+h1 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
