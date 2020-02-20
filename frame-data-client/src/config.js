@@ -1,4 +1,4 @@
 export default {
-    API_ENDPOINT: 'http://localhost:8000/api',
-    TOKEN_KEY: 'frame-data-app',
-  }
+  API_ENDPOINT: "https://desolate-island-37061.herokuapp.com/api",
+  TOKEN_KEY: process.env.API_KEY
+};
