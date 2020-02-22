@@ -1,18 +1,20 @@
-
-.CharListMain > ul{
-    list-style-type: none;
-    margin: 130px 0 0;
-    padding: 0;
+.CharListMain > ul {
+  list-style-type: none;
+  margin: 15px 0 0;
+  padding: 0;
 }
 
 .CharList {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 body {
-    background-image: url('https://wallpapercave.com/wp/wp4402256.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
