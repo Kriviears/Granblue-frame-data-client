@@ -7,7 +7,7 @@
     "head head"
     "main  main"
     "main  main";
-  grid-template-rows: 150px 1fr 30px;
+  grid-template-rows: 70px 1fr 30px;
   grid-template-columns: 50% 4fr;
   min-height: 100vh;
 }
@@ -15,7 +15,7 @@
 .App_header {
   grid-area: head;
   background-color: #282c34;
-  min-height: 15vh;
+  min-height: 4vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -24,8 +24,15 @@
   color: white;
 }
 
+.App_header a {
+  font-size: 18px;
+  color: brown;
+  text-decoration: none;
+}
+
 .App_main {
   grid-area: main;
+  overflow: hidden;
   /* background-color: aqua; */
 }
 

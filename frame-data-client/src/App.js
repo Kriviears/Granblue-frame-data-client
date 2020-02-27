@@ -9,6 +9,7 @@ import CharacterPageMain from "./CharacterPageMain/CharacterPageMain";
 import CharacterPageNav from "./CharacterPageNav/CharacterPageNav";
 import CharacterListMain from "./CharacterListMain/CharacterListMain";
 import CharacterListNav from "./CharacterListNav/CharacterListNav";
+import CharacterInfoMain from "./CharacterInfoMain/CharacterInfoMain";
 
 class App extends React.Component {
   state = {
@@ -66,10 +67,6 @@ class App extends React.Component {
       <>
         <Route exact path="/" component={CharacterListNav} />
         <Route path="/character/:name" component={CharacterPageNav} />
-        {/* <Route
-          path='/character/:name/framedata'
-          component={CharacterPageNav}
-        /> */}
       </>
     );
   }
@@ -78,11 +75,11 @@ class App extends React.Component {
     return (
       <>
         <Route exact path="/" component={CharacterListMain} />
-        <Route exact path="/character/:name" component={CharacterPageMain} />
         <Route
           path="/character/:name/framedata"
           component={CharacterPageMain}
         />
+        <Route path="/character/:name/info" component={CharacterInfoMain} />
       </>
     );
   }

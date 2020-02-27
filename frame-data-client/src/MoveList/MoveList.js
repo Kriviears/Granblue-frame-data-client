@@ -82,7 +82,7 @@ export default class MoveList extends Component {
             )}
 
             {this.showColumn("Properties") ? (
-              this.tableHeader("Properties")
+              this.tableHeader("Special Properties")
             ) : (
               <></>
             )}

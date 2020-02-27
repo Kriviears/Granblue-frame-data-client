@@ -24,7 +24,8 @@ export default class CharacterPageNav extends Component {
 
         <div className="Home__button">
           <Link className="CharacterPage__Link" to={`/`}>
-            <h1>{this.props.match.params.name}</h1>
+            {/* <h1>{this.props.match.params.name}</h1> */}
+            <img src="https://i2.wp.com/www.sittingonclouds.net/wp-content/uploads/2019/07/Samurai-Shodown-2019-Logo.png?fit=525%2C143&ssl=1" />
           </Link>
         </div>
       </>
