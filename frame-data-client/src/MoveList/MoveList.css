@@ -165,8 +165,8 @@ tr {
 } */
 
 @media (max-width: 800px) {
-  .movelist td:nth-child(4),
-  .movelist th:nth-child(4) {
+  .movelist td:nth-child(6),
+  .movelist th:nth-child(6) {
     display: none;
   }
 }

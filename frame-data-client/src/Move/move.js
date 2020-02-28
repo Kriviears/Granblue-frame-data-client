@@ -52,7 +52,7 @@ export default class Move extends Component {
         ) : (
           <></>
         )}
-        {this.showColumn("On hit") ? this.tableRow(this.props.startup) : <></>}
+        {this.showColumn("On hit") ? this.tableRow(this.props.onhit) : <></>}
         {this.showColumn("attribute") ? (
           this.tableRow(this.props.attribute)
         ) : (
