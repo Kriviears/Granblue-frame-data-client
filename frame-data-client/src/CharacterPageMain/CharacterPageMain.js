@@ -33,7 +33,7 @@ export default class CharacterPageMain extends Component {
 
   componentDidMount() {
     CharacterApiService.getMoves(this.props.match.params.name).then(data => {
-      this.context.getMoves(data);
+      this.context.getMoves(data.sort((a, b) => a.id - b.id));
     });
   }
 
@@ -57,10 +57,7 @@ export default class CharacterPageMain extends Component {
           isTextWrap={true}
         />
 
-        <MoveList
-          name={this.props.match.params.name}
-          columns={this.state.multiSelect}
-        />
+        <MoveList columns={this.state.multiSelect} />
       </div>
     );
   }

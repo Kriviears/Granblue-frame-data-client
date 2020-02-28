@@ -10,6 +10,7 @@ export default class CharacterListMain extends Component {
 
   componentDidMount() {
     CharApiService.getCharacters().then(data => {
+      data.sort((a, b) => a.name.localeCompare(b.name));
       this.context.setCharacters(data);
     });
   }

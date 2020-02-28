@@ -23,6 +23,7 @@ export default class MoveList extends Component {
 
   render() {
     const { moves } = this.context;
+
     let filteredList = moves.map((move, index) => (
       <Move
         key={index}
