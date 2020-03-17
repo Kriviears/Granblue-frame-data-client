@@ -5,6 +5,7 @@ import "./App.css";
 import TekkenContext from "./TekkenContext";
 import { gatherData } from "./aux-functions";
 
+import LandingPage from "./LandingPage/LandingPage";
 import CharacterPageMain from "./CharacterPageMain/CharacterPageMain";
 import CharacterPageNav from "./CharacterPageNav/CharacterPageNav";
 import CharacterListMain from "./CharacterListMain/CharacterListMain";
@@ -74,7 +75,8 @@ class App extends React.Component {
   renderMainRoutes() {
     return (
       <>
-        <Route exact path="/" component={CharacterListMain} />
+        <Route exact path="/" component={LandingPage} />
+        <Route path="/select" component={CharacterListMain} />
         <Route
           path="/character/:name/framedata"
           component={CharacterPageMain}
