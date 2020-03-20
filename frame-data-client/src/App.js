@@ -66,6 +66,7 @@ class App extends React.Component {
   renderNavRoutes() {
     return (
       <>
+        <Route exact path="/" component={CharacterListNav} />
         <Route path="/select" component={CharacterListNav} />
         <Route path="/character/:name" component={CharacterPageNav} />
       </>

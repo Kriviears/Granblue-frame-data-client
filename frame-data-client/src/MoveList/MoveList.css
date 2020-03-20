@@ -15,7 +15,7 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
   line-height: 1.42em;
-  color: #a7a1ae;
+  color: #9c8c89;
   background-color: #1f2739;
 }
 
@@ -87,6 +87,7 @@
   padding: 10px;
   margin: 0%;
   text-align: left;
+  border: 1px solid rgb(126, 118, 118);
 }
 
 .movelist thead,
@@ -97,7 +98,7 @@
 
 .movelist th,
 .movelist th h1 {
-  text-align: left;
+  text-align: center;
 }
 
 .header {
@@ -118,7 +119,9 @@
 tr {
   display: table;
   width: 100%;
+  height: 100px;
   table-layout: fixed;
+  font-size: 28px;
 }
 
 /* Background-color of the odd rows */
@@ -128,12 +131,13 @@ tr {
 
 /* Background-color of the even rows */
 .movelist tr:nth-child(even) {
-  background-color: #5a590d;
+  background-color: #e8e1d1;
 }
 
 /*Background-color of the headers*/
 .movelist th {
-  background-color: #babec7;
+  background-color: #89989c;
+  text-align: center;
 }
 
 /* Text colo of command notations */
@@ -142,12 +146,12 @@ tr {
   /* width: 9%; */
 }
 
-.movelist tr:hover {
+/* .movelist tr:hover {
   background-color: #52af57;
   -webkit-box-shadow: 0 6px 6px -6px #0e1119;
   -moz-box-shadow: 0 6px 6px -6px #0e1119;
   box-shadow: 0 6px 6px -6px #0e1119;
-}
+} */
 
 /* .movelist td:hover {
   background-color: #a1182d;
@@ -168,6 +172,10 @@ tr {
   .movelist td:nth-child(6),
   .movelist th:nth-child(6) {
     display: none;
+  }
+
+  tr {
+    height: 50px;
   }
 }
 
