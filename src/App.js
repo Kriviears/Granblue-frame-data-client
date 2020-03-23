@@ -76,8 +76,7 @@ class App extends React.Component {
   renderMainRoutes() {
     return (
       <>
-        <Route exact path="/" component={LandingPage} />
-        <Route path="/select" component={CharacterListMain} />
+        <Route exact path="/" component={CharacterListMain} />
         <Route
           path="/character/:name/framedata"
           component={CharacterPageMain}
