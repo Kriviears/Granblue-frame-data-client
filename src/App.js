@@ -5,7 +5,6 @@ import "./App.css";
 import TekkenContext from "./TekkenContext";
 import { gatherData } from "./aux-functions";
 
-import LandingPage from "./LandingPage/LandingPage";
 import CharacterPageMain from "./CharacterPageMain/CharacterPageMain";
 import CharacterPageNav from "./CharacterPageNav/CharacterPageNav";
 import CharacterListMain from "./CharacterListMain/CharacterListMain";

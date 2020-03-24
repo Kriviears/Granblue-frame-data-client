@@ -9,7 +9,7 @@ export default class CharacterListNav extends Component {
       <>
         <h1></h1>
         <div className="CharListNav">
-          <h1>Embrace Frames</h1>
+          <h1>Granblue Fantasy Frame Data</h1>
 
           {/* <ul className='CharListNav_List'>
                 {characters.map(character => 
