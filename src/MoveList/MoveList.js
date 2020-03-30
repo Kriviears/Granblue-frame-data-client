@@ -32,12 +32,10 @@ export default class MoveList extends Component {
         startup={move.startup}
         activeframes={move.activeframes}
         onblock={move.onblock}
-        onhit={move.onhit}
+        onhit={move.onhit < 400 ? move.onhit : "Knockdown"}
         attribute={move.attribute}
         recovery={move.recovery}
         damage={move.damage}
-        cancel={move.cancel ? "Yes" : ""}
-        super_cancel={move.super_cancel ? "Yes" : ""}
         properties={move.properties}
         special={move.special ? "Yes" : ""}
         columns={this.props.columns}
@@ -70,17 +68,17 @@ export default class MoveList extends Component {
 
             {this.showColumn("damage") ? this.tableHeader("Damage") : <></>}
 
-            {this.showColumn("Cancelable?") ? (
+            {/* {this.showColumn("Cancelable?") ? (
               this.tableHeader("Cancelable?")
             ) : (
               <></>
-            )}
+            )} */}
 
-            {this.showColumn("Super Cancelable?") ? (
+            {/* {this.showColumn("Super Cancelable?") ? (
               this.tableHeader("Super Cancelable")
             ) : (
               <></>
-            )}
+            )} */}
 
             {this.showColumn("Properties") ? (
               this.tableHeader("Special Properties")

@@ -16,9 +16,9 @@ export default class CharacterPageMain extends Component {
         { id: 4, label: "attribute", value: false },
         { id: 5, label: "recovery", value: false },
         { id: 6, label: "damage", value: true },
-        { id: 7, label: "Cancelable?", value: false },
-        { id: 8, label: "Super Cancelable?", value: false },
-        { id: 9, label: "Properties", value: true }
+        // { id: 7, label: "Cancelable?", value: false },
+        // { id: 8, label: "Super Cancelable?", value: false },
+        { id: 7, label: "Properties", value: true }
       ]
     };
   }

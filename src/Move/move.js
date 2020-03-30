@@ -64,16 +64,16 @@ export default class Move extends Component {
           <></>
         )}
         {this.showColumn("damage") ? this.tableRow(this.props.damage) : <></>}
-        {this.showColumn("Cancelable?") ? (
+        {/* {this.showColumn("Cancelable?") ? (
           this.tableRow(this.props.cancel)
         ) : (
           <></>
-        )}
-        {this.showColumn("Super Cancelable?") ? (
+        )} */}
+        {/* {this.showColumn("Super Cancelable?") ? (
           this.tableRow(this.props.super_cancel)
         ) : (
           <></>
-        )}
+        )} */}
         {this.showColumn("Properties") ? (
           this.tableRow(this.props.properties)
         ) : (
