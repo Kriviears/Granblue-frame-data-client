@@ -40,6 +40,15 @@ export default class Move extends Component {
 
   render() {
     // this.fixProps(this.state);
+    function HitCodes(onhit) {
+      let whatHappen;
+      if (onhit < 400) whatHappen = onhit;
+      else if (onhit == 400) whatHappen = "Knock up";
+      else if (onhit == 401) whatHappen = "Wall bounce";
+      else if (onhit == 420) whatHappen = "Knockdown";
+      else if (onhit == 421) whatHappen = "Hard Knockdown";
+      return whatHappen;
+    }
     return (
       <tr>
         {/* <td>{this.props.media}</td> */}
@@ -52,7 +61,11 @@ export default class Move extends Component {
         ) : (
           <></>
         )}
-        {this.showColumn("On hit") ? this.tableRow(this.props.onhit) : <></>}
+        {this.showColumn("On hit") ? (
+          this.tableRow(HitCodes(this.props.onhit))
+        ) : (
+          <></>
+        )}
         {this.showColumn("attribute") ? (
           this.tableRow(this.props.attribute)
         ) : (
