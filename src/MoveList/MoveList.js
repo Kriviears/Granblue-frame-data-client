@@ -32,7 +32,7 @@ export default class MoveList extends Component {
         startup={move.startup}
         activeframes={move.activeframes}
         onblock={move.onblock}
-        onhit={move.onhit < 400 ? move.onhit : "Knockdown"}
+        onhit={move.onhit}
         attribute={move.attribute}
         recovery={move.recovery}
         damage={move.damage}
