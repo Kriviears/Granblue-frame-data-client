@@ -9,15 +9,16 @@ export default class CharacterListMain extends Component {
   static contextType = TekkenContext;
 
   componentDidMount() {
-    CharApiService.getCharacters().then(data => {
+    CharApiService.getCharacters().then((data) => {
       data.sort((a, b) => a.name.localeCompare(b.name));
       this.context.setCharacters(data);
     });
   }
 
   render() {
-    const { characters, characterSelect } = this.context;
-    let filteredList = characters;
+    const { characters, characterSelect, setCurrentCharacter } = this.context;
+    let filteredList = characters.filter((char) => char.id !== 14);
+    console.log(this.context);
 
     return (
       <div className="CharListMain">
@@ -31,6 +32,7 @@ export default class CharacterListMain extends Component {
                   name={char.name}
                   src={char.thumbnail}
                   alt={char.name}
+                  onClick={() => setCurrentCharacter()}
                 />
               </Link>
             </li>

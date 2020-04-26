@@ -18,21 +18,21 @@ export default class CharacterPageMain extends Component {
         { id: 6, label: "damage", value: true },
         // { id: 7, label: "Cancelable?", value: false },
         // { id: 8, label: "Super Cancelable?", value: false },
-        { id: 7, label: "Properties", value: true }
-      ]
+        { id: 7, label: "Properties", value: true },
+      ],
     };
   }
 
   static defaultProps = {
     match: {
-      params: {}
-    }
+      params: {},
+    },
   };
 
   static contextType = TekkenContext;
 
   componentDidMount() {
-    CharacterApiService.getMoves(this.props.match.params.name).then(data => {
+    CharacterApiService.getMoves(this.props.match.params.name).then((data) => {
       this.context.getMoves(data.sort((a, b) => a.id - b.id));
     });
   }
@@ -40,12 +40,13 @@ export default class CharacterPageMain extends Component {
   render() {
     const selectedOptionsStyles = {
       color: "#3c763d",
-      backgroundColor: "#dff0d8"
+      backgroundColor: "#dff0d8",
     };
     const optionsListStyles = {
       backgroundColor: "#fcf8e3",
-      color: "#8a6d3b"
+      color: "#8a6d3b",
     };
+    console.log(this.context);
     return (
       <div className="CharPageMain">
         <MultiSelectReact
