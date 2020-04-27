@@ -7,7 +7,6 @@ export default class CharacterListNav extends Component {
   render() {
     return (
       <>
-        <h1></h1>
         <div className="CharListNav">
           <h1>Granblue Fantasy Frame Data</h1>
 
@@ -20,7 +19,6 @@ export default class CharacterListNav extends Component {
                 )}
               </ul> */}
         </div>
-        <h1></h1>
       </>
     );
   }

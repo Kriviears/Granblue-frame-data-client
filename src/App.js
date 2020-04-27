@@ -26,39 +26,41 @@ class App extends React.Component {
       damage: true,
       cancel: true,
       super_cancel: true,
-      properties: true
-    }
+      properties: true,
+    },
   };
 
-  setCharacters = data => {
+  setCharacters = (data) => {
     this.setState({
-      characters: data
+      characters: data,
     });
   };
 
-  getMoves = data => {
+  getMoves = (data) => {
     this.setState({
-      moves: data
+      moves: data,
     });
   };
 
-  setCurrentCharacter = name => {
-    let current = this.state.characters.filter(char => char.name === name);
+  setCurrentCharacter = (name) => {
+    let current = this.state.characters.filter((char) => char.name === name);
+    console.log("setting character");
     this.setState({
-      currentCharacter: current
+      currentCharacter: current,
     });
   };
 
-  characterSelect = i => {
+  characterSelect = (i) => {
     const char = this.state.characters[i];
+    console.log("character select");
     this.setState({
-      currentCharacter: char
+      currentCharacter: char,
     });
   };
 
   backHome() {
     this.setState({
-      currentCharacter: { name: "" }
+      currentCharacter: { name: "" },
     });
   }
 
@@ -95,7 +97,7 @@ class App extends React.Component {
       backHome: this.backHome,
       setCharacters: this.setCharacters,
       setCurrentCharacter: this.setCurrentCharacter,
-      getMoves: this.getMoves
+      getMoves: this.getMoves,
     };
 
     return (

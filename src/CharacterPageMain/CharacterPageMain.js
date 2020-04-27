@@ -4,6 +4,7 @@ import TekkenContext from "../TekkenContext";
 import CharacterApiService from "../services/char-api-service";
 import MoveList from "../MoveList/MoveList";
 import MultiSelectReact from "multi-select-react";
+import ButterflyButton from "../ButterflyButton/ButterflyButton";
 
 export default class CharacterPageMain extends Component {
   constructor() {
@@ -46,7 +47,6 @@ export default class CharacterPageMain extends Component {
       backgroundColor: "#fcf8e3",
       color: "#8a6d3b",
     };
-    console.log(this.context);
     return (
       <div className="CharPageMain">
         <MultiSelectReact
@@ -57,6 +57,8 @@ export default class CharacterPageMain extends Component {
           optionsListStyles={optionsListStyles}
           isTextWrap={true}
         />
+
+        <ButterflyButton name={this.props.match.params.name} />
 
         <MoveList columns={this.state.multiSelect} />
       </div>
@@ -70,5 +72,9 @@ export default class CharacterPageMain extends Component {
   selectedBadgeClicked(optionsList) {
     console.log("option clicked");
     this.setState({ multiSelect: optionsList });
+  }
+  stanceChange() {
+    console.log("Stance change");
+    window.location.reload(false);
   }
 }

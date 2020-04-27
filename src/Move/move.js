@@ -3,15 +3,15 @@ import "./move.css";
 import TekkenContext from "../TekkenContext";
 
 export default class Move extends Component {
-  fixProps = data => {
+  fixProps = (data) => {
     if (data.media === null) {
       this.setState({
-        media: "image coming soon"
+        media: "image coming soon",
       });
     }
     if (data.attribute === "") {
       this.setState({
-        attribute: "mid"
+        attribute: "mid",
       });
     }
   };
@@ -25,7 +25,7 @@ export default class Move extends Component {
   }
   numberColumns() {
     var numberTrue = 0;
-    this.props.columns.forEach(column => {
+    this.props.columns.forEach((column) => {
       if (column.value === true) numberTrue++;
     });
     if (numberTrue !== 0) return numberTrue;
@@ -33,7 +33,7 @@ export default class Move extends Component {
   }
 
   calcWidth = {
-    width: `${100 / this.numberColumns()}%`
+    width: `${100 / this.numberColumns()}%`,
   };
 
   static contextType = TekkenContext;
@@ -43,10 +43,10 @@ export default class Move extends Component {
     function HitCodes(onhit) {
       let whatHappen;
       if (onhit < 400) whatHappen = onhit;
-      else if (onhit == 400) whatHappen = "Knock up";
-      else if (onhit == 401) whatHappen = "Wall bounce";
-      else if (onhit == 420) whatHappen = "Knockdown";
-      else if (onhit == 421) whatHappen = "Hard Knockdown";
+      else if (onhit === 400) whatHappen = "Knock up";
+      else if (onhit === 401) whatHappen = "Wall bounce";
+      else if (onhit === 420) whatHappen = "Knockdown";
+      else if (onhit === 421) whatHappen = "Hard Knockdown";
       return whatHappen;
     }
     return (

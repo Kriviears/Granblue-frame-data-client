@@ -1,26 +1,17 @@
 import React, { Component } from "react";
 import "./CharacterPageNav.css";
 import { Link } from "react-router-dom";
-import TekkenContext from "../TekkenContext";
+import ButterflyButton from "../ButterflyButton/ButterflyButton";
 
 export default class CharacterPageNav extends Component {
-  static contextType = TekkenContext;
-
-  butterfly = (name) => {
-    name = this.props.match.params.name;
-    console.log(`Butterfly ${name}`);
-    if (name.includes("Narmaya")) {
-      return (
-        <>
-          <img src="https://gbf.wiki/images/thumb/f/fd/Status_Butterfly.png/25px-Status_Butterfly.png" />
-        </>
-      );
-    } else return <></>;
+  static defaultProps = {
+    match: {
+      params: {},
+    },
   };
 
   render() {
-    const { currentCharacter } = this.context;
-
+    console.log(`From the nav ${this.props.match.params.name}`);
     return (
       <>
         <div className="char_tabs">
@@ -36,11 +27,15 @@ export default class CharacterPageNav extends Component {
           </Link>
         </div>
 
-        {this.butterfly()}
+        <h1>{this.props.match.params.name}</h1>
+
         <div className="Home__button">
           <Link className="CharacterPage__Link" to={`/`}>
             {/* <h1>{this.props.match.params.name}</h1> */}
-            <img src="https://upload.wikimedia.org/wikipedia/en/9/93/Granblue_Fantasy_Versus_logo.png" />
+            <img
+              alt="Home Button"
+              src="https://upload.wikimedia.org/wikipedia/en/9/93/Granblue_Fantasy_Versus_logo.png"
+            />
           </Link>
         </div>
       </>
