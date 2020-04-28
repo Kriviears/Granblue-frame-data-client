@@ -18,3 +18,8 @@ body {
   background-position: center;
   background-size: cover;
 }
+
+.CharList > li {
+  min-width: 25%;
+  text-align: -webkit-center;
+}

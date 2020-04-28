@@ -16,7 +16,7 @@ export default class CharacterListMain extends Component {
   }
 
   render() {
-    const { characters, characterSelect, setCurrentCharacter } = this.context;
+    const { characters, setCurrentCharacter } = this.context;
     let filteredList = characters.filter((char) => char.id !== 14);
     console.log(this.context);
 
@@ -24,7 +24,7 @@ export default class CharacterListMain extends Component {
       <div className="CharListMain">
         <ul className="CharList">
           {filteredList.map((char, i) => (
-            <li key={i} onClick={() => characterSelect(i)}>
+            <li key={i}>
               <Link
                 className="CharacterList__link"
                 to={`/character/${char.name}/framedata`}>
