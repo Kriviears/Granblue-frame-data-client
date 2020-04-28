@@ -10,17 +10,23 @@ export default class CharacterPageNav extends Component {
     },
   };
 
+  cleanHistory = () => {
+    this.props.history.replace("/");
+  };
+
   render() {
-    console.log(`From the nav ${this.props.match.params.name}`);
+    console.log(`From the nav ${this.props.history}`);
     return (
       <>
         <div className="char_tabs">
           <Link
+            onClick={() => this.cleanHistory()}
             className="frames"
             to={`/character/${this.props.match.params.name}/framedata`}>
             <h1>Frames </h1>
           </Link>
           <Link
+            onClick={() => this.cleanHistory()}
             className="info"
             to={`/character/${this.props.match.params.name}/info`}>
             <h1>Info</h1>

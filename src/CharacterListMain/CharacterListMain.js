@@ -18,7 +18,6 @@ export default class CharacterListMain extends Component {
   render() {
     const { characters, setCurrentCharacter } = this.context;
     let filteredList = characters.filter((char) => char.id !== 14);
-    console.log(this.context);
 
     return (
       <div className="CharListMain">
